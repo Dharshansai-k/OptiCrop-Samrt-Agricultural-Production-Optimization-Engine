@@ -82,6 +82,30 @@ def predict():
             float(data["rainfall"])
         ]])
 
+        N, P, K, temp, hum, ph, rain = features[0]
+
+        if not (0 <= N <= 140):
+            return jsonify({"success": False, "message": "Invalid Nitrogen value."})
+
+        if not (5 <= P <= 145):
+            return jsonify({"success": False, "message": "Invalid Phosphorous value."})
+
+        if not (5 <= K <= 205):
+            return jsonify({"success": False, "message": "Invalid Potassium value."})
+
+        if not (8 <= temp <= 45):
+            return jsonify({"success": False, "message": "Invalid Temperature value."})
+
+        if not (10 <= hum <= 100):
+            return jsonify({"success": False, "message": "Invalid Humidity value."})
+
+        if not (3.5 <= ph <= 10):
+            return jsonify({"success": False, "message": "Invalid pH value."})
+
+        if not (20 <= rain <= 300):
+            return jsonify({"success": False, "message": "Invalid Rainfall value."})
+
+
         if model_info["requires_scaling"]:
 
             prediction_input = scaler.transform(features)
