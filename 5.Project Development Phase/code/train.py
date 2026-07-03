@@ -54,10 +54,7 @@ def train_and_evaluate():
         "Logistic Regression": LogisticRegression(max_iter=1500, random_state=42),
         "K-Nearest Neighbors": KNeighborsClassifier(n_neighbors=5),
         "Decision Tree": DecisionTreeClassifier(random_state=42),
-        "Random Forest": RandomForestClassifier(
-            n_estimators=100,
-            random_state=42
-        )
+        "Random Forest": RandomForestClassifier(n_estimators=100,random_state=42)
     }
 
     best_model = None
