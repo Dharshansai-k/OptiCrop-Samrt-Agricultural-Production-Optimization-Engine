@@ -109,7 +109,7 @@ The Random Forest model was selected as the final model because it achieved the 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Dharshansai-k/APSCHE-AI-ML-Project.git
+git clone https://github.com/Dharshansai-k/OptiCrop-Samrt-Agricultural-Production-Optimization-Engine.git
 cd APSCHE-AI-ML-Project
 ```
 
